@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { UpdaterService } from '../updater.service';
+import { UpdaterService } from '../../services/updater.service
 
 @Component({
   selector: 'app-rog-console',

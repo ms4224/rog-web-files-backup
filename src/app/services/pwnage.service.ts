@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '../components/current-enemy/node_modules/@angular/core';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()

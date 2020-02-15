@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PwnageService } from '../pwnage.service';
-import { ColorsService } from '../colors.service';
+import { PwnageService } from '../../services/pwnage.service';
+import { ColorsService } from '../../services/colors.service';
 
 @Component({
   selector: 'app-all-enemies',

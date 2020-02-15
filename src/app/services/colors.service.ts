@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '../components/current-enemy/node_modules/@angular/core';
 
 @Injectable()
 export class ColorsService {

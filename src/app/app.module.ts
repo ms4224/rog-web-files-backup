@@ -4,17 +4,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { PwnageService } from './pwnage.service';
-import { CurrentEnemyComponent } from './current-enemy/current-enemy.component';
+import { PwnageService } from './services/pwnage.service';
+import { CurrentEnemyComponent } from './components/current-enemy/current-enemy.component';
 import { AppRoutingModule } from './/app-routing.module';
-import {ColorsService} from './colors.service';
-import { AllEnemiesComponent } from './all-enemies/all-enemies.component';
-import { PicturesComponent } from './pictures/pictures.component';
-import { TwitchComponent } from './twitch/twitch.component';
-import { BannerComponent } from './banner/banner.component';
-import { ChatOnlyComponent } from './chat-only/chat-only.component';
-import { UpdaterService } from './updater.service';
-import { RogConsoleComponent } from './rog-console/rog-console.component';
+import {ColorsService} from './services/colors.service';
+import { AllEnemiesComponent } from './components/all-enemies/all-enemies.component';
+import { PicturesComponent } from './components/pictures/pictures.component';
+import { TwitchComponent } from './components/twitch/twitch.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { ChatOnlyComponent } from './components/chat-only/chat-only.component';
+import { UpdaterService } from './services/updater.service';
+import { RogConsoleComponent } from './components/rog-console/rog-console.component';
 import { FormsModule } from '@angular/forms';
 
 
