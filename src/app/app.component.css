@@ -1,0 +1,41 @@
+.container {
+    background-color: black;
+}
+
+.container-fluid {
+    background-color: black;
+}
+
+.btn-container {
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+
+@media (max-width: 576px){
+    .btn-container{
+        font-size: 2vw;
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px){
+    .btn-container{
+        font-size: 1vw;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px){
+    .btn-container{
+        font-size: 1vw;
+    }
+}
+
+@media (min-width: 993px) {
+    .btn-container{
+        font-size: .9vw;
+    }
+}

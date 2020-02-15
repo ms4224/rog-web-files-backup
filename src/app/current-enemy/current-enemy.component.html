@@ -1,0 +1,62 @@
+<app-banner></app-banner>
+<div class="container">
+  <h1>Currently Pwning....</h1>
+  <h1><span>{{enemy}}</span></h1>
+  <!-- <p>Wins: {{wins}}, Losses: {{losses}}, Total Games: {{wins + losses}}</p>
+        <p>Sudden Deaths: {{suddendeath}}, Sudden Death Ratio: {{ (suddendeath/(wins + losses) * 100).toFixed(2) }}%</p>
+        <p>Plus Fives: {{plusfive}}</p> -->
+
+  <!-- funny faces row col -->
+  <div class="row">
+    <div class="col-xs-0 col-sm-2 col-md-2"></div>
+    <div class="col-xs-3 col-sm-2 col-md-2">
+      <img [src]="'./assets/images/roy-' + face_color + '.png'" alt="roy" class="funny-faces">
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <p class="img-centering">Win Ratio: <span [style.color]="color">{{(win_ratio*100).toFixed(2)}}%</span></p>
+    </div>
+    <div class="col-xs-3 col-sm-2 col-md-2">
+      <img [src]="'./assets/images/ganon-' + face_color + '.png'" alt="roy" class="funny-faces">
+    </div>
+    <div class="col-xs-0 col-sm-2 col-md-2"></div>
+
+
+  </div>
+  <!--  -->
+  <!-- <h3>Win Ratio: <span [style.color]="color">{{(win_ratio*100).toFixed(2)}}%</span></h3> -->
+  <div class="progress">
+    <div class="progress-bar" id="mybar" role="progressbar" [style.width]="percent" [style.background-color]="color"
+      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Enemy Name</th>
+        <th scope="col">Total Matches</th>
+        <th scope="col">Wins</th>
+        <th scope="col">Losses</th>
+        <th scope="col">Win%</th>
+        <th scope="col">Sudden Deaths</th>
+        <th scope="col">Sudden Death %</th>
+        <th scope="col">Plus5's</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-active">
+        <th scope="row">{{enemy}}</th>
+        <td>{{wins + losses}}</td>
+        <td>{{wins}}</td>
+        <td>{{losses}}</td>
+        <td>{{(win_ratio*100).toFixed(2)}}</td>
+        <td>{{suddendeath}}</td>
+        <td>{{ (suddendeath/(wins + losses) * 100).toFixed(2) }}</td>
+        <td>{{plusfive}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+</div>

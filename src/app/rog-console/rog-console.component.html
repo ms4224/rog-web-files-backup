@@ -1,0 +1,56 @@
+<div class="container">
+  <h1>Rog-Console (Web Version)</h1>
+
+  
+<!-- secret input -->
+  <form #secretRogForm="ngForm" novalidate *ngIf="!access_granted">
+      <div class="secretValidation">
+          <input type="text" [(ngModel)]="secret1" name="secret1" required>
+          <input type="text" [(ngModel)]="secret2" name="secret2" required>
+          <button class="btn btn-success" [disabled]="!secretRogForm.form.valid || disable_buttons" (click)="sendSecret()">submit secrets</button>
+    
+      </div>
+
+  </form>
+  
+
+  <form #rogForm="ngForm" novalidate *ngIf="access_granted">
+
+    <div class="formGroup">
+      <h2>Current Enemy</h2>
+      <input type="text" [(ngModel)]="enemy_name" name="enemy_name" required
+      #name="ngModel">
+      <button class="btn btn-success" [disabled]="!rogForm.form.valid || disable_buttons" (click)="onClickUpdateCurrentEnemy();">Update Current Enemy</button>
+      <!-- ngmodel: {{enemy_name}} name.valid: {{name.valid}} name.pristine: {{name.pristine}} access_granted: {{access_granted}} secret1: {{secret1}} secret2: {{secret2}} -->
+
+
+    </div>
+
+    <div class="formGroup">
+      <h2>Win....</h2>
+      <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4"><input type=radio [checked]="win_state.win" (click)="refactor('win')">WIN</div>
+        <div class="col-xs-4 col-sm-4 col-md-4"><input type=radio [checked]="win_state.win_sd" (click)="refactor('win_sd')">WIN - SD</div>
+        <div class="col-xs-4 col-sm-4 col-md-4"><input type=radio [checked]="win_state.win_plus5" (click)="refactor('win_plus5')">WIN - PLUS5</div>
+      </div>
+
+      <h2>Loss....</h2>
+      <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4"><input type=radio [checked]="win_state.loss" (click)="refactor('loss')">LOSS</div>
+          <div class="col-xs-4 col-sm-4 col-md-4"><input type=radio [checked]="win_state.loss_sd" (click)="refactor('loss_sd')">LOSS - SD</div>
+        </div>
+
+        <!-- sanity check {{win_state | json}}  enemy_name: {{enemy_name}} disable_buttons: {{disable_buttons}} -->
+
+
+    </div>
+
+    <div>
+      <br>
+      <button type="submit" class="btn btn-success" [disabled]="!rogForm.form.valid || disable_buttons" (click)="onSubmit();">Submit Records Update</button>
+    </div>
+
+  </form>
+
+
+</div>

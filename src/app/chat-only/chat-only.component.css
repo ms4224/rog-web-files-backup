@@ -1,0 +1,12 @@
+.container {
+    margin-top: 20px;
+   
+}
+
+.vid > iframe  {
+    min-height: 400px;
+}
+
+.chat > iframe {
+    min-height: 650px;
+}

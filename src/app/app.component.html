@@ -1,0 +1,47 @@
+
+<!-- <app-sample-view></app-sample-view> -->
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12  col-sm-3 col-md-3 btn-container">
+                <a routerLink="/currentlypwning"><button type="button" class="btn btn-primary btn-lg btn-container">Current Challenger</button></a>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3 btn-container">
+                <a routerLink="/allenemies"><button type="button" class="btn btn-primary btn-lg btn-container">View All Enemies</button></a>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3 btn-container">
+                <a routerLink="/twitch"><button type="button" class="btn btn-primary btn-lg btn-container">Twitch!!</button></a>
+        </div>
+        <div class="nothing  col-sm-3 col-md-3">
+
+        </div>
+    </div>
+</div> -->
+
+<!-- currently debugging leave the rest off -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" routerLink="/currentlypwning">RoyOGannonPlus5</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="/currentlypwning">Current Challenger <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="/allenemies">All Enemies</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="/twitch">Twitch!!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/twitchchatonly">Chat Only</a>
+                      </li>
+                  </ul>
+                  
+                </div>
+              </nav>
+
+<router-outlet></router-outlet>
+
